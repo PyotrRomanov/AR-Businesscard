@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="fonk_front" size="334.000000 211.000000" />
+    <ImageTarget name="Fonk_BusinessCards_Boreo2" size="1080.000000 1668.184570" />
+    <ImageTarget name="fonk_back" size="0.100000 0.063174" />
+  </Tracking>
+</QCARConfig>
