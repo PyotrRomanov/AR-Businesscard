@@ -14,7 +14,7 @@ public class VideoAnimationScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //videoPlayer.Stop();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class VideoAnimationScript : MonoBehaviour
         {
             videoVisible = true;
             videoPlayer.time = 0;
-            videoPlayer.Play();
+            //videoPlayer.Play();
             transform.DOLocalMoveZ(-0.047f, 1);
             AnalyticsScript.OpenedVideo();
         }
@@ -46,6 +46,7 @@ public class VideoAnimationScript : MonoBehaviour
         if (videoVisible)
         {
             videoVisible = false;
+            //videoPlayer.Stop();
             transform.DOLocalMoveZ(0.013f, 0.4f);
             AnalyticsScript.ClosedVideo();
         }

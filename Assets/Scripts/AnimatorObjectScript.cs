@@ -119,6 +119,8 @@ public class AnimatorObjectScript : DefaultTrackableEventHandler
         fonky.GetComponent<AnimationAnimationScript>().HideAnimation();
 
         video.GetComponent<VideoAnimationScript>().ShowVideo();
+
+        infoContainer.GetComponent<InfoContainerScript>().UnAnimateInfo();
     }
 
     public void AnimationButtonPressed()
@@ -126,6 +128,8 @@ public class AnimatorObjectScript : DefaultTrackableEventHandler
         video.GetComponent<VideoAnimationScript>().HideVideo();
 
         fonky.GetComponent<AnimationAnimationScript>().ShowAnimation();
+
+        infoContainer.GetComponent<InfoContainerScript>().UnAnimateInfo();
 
     }
 

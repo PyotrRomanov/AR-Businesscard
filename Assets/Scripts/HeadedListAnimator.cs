@@ -47,4 +47,19 @@ public class HeadedListAnimator : MonoBehaviour
             children[i].DOLocalMoveY(-0.214f * (i + 1), 1f).SetEase(bump).SetDelay((children.Count - 1 - i) * 0.3f);
         }
     }
+
+    public void UnAnimateHeadedList(){
+        StopCoroutine(AnimateHeadedListCoroutine());
+        StartCoroutine(UnAnimateHeadedListCoroutine());
+    }
+
+    IEnumerator UnAnimateHeadedListCoroutine(){
+        for(int i = 0; i < children.Count - 1; i++){
+            children[i].DOLocalMoveY(0, 1f).SetEase(bump).SetDelay((children.Count - 1 - i) * 0.3f);
+        }
+
+        yield return new WaitForSeconds(1f);
+        
+        transform.DOLocalMoveX(0, 1f).SetEase(bump);
+    }
 }
